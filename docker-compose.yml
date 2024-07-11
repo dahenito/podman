@@ -1,0 +1,11 @@
+#
+services:
+  podman:
+    image: dockerapp/podman
+    privileged: true
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        - HOSTOS=darwin
+        - HOSTARCH=arm64
